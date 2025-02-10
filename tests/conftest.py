@@ -12,6 +12,6 @@ def browser_options():
     browser.config.window_width = 1920
     browser.config.base_url = 'https://demoqa.com'
 
-    #yield
+    yield
 
-    #browser.quit()
+    browser.quit()
