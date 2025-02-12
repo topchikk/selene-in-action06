@@ -10,10 +10,9 @@ def test_registration_form(browser_options):
     browser.element('[for="gender-radio-1"]').click()
     browser.element('#userNumber').should(be.blank).type('123455432')
     browser.element('[id="dateOfBirthInput"]').perform(command.js.scroll_into_view).click()
-    browser.element('[id="dateOfBirthInput"]').click()
     browser.element('.react-datepicker__month-select').click().element(by.text('January')).click()
     browser.element('.react-datepicker__year-select').click().element(by.text('2001')).click()
-    browser.element('body').click()
+    browser.element('.react-datepicker__day--027').click()
     browser.element('#subjectsInput').should(be.blank).type('matesha, fizra')
     browser.element('[for="hobbies-checkbox-1"]').click()
 
